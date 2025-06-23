@@ -1,5 +1,16 @@
-<header class="header-dark">
-  <div class="logo"><img src="images/logo-white.png" alt="Holzwerk Logo" /></div>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holzwerk – Monolith-Tische aus Massivholz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <header>
+  <div class="logo">
+    <img src="images/logo.png" alt="Holzwerk Logo" />
+  </div>
   <nav>
     <ul>
       <li><a href="index.html">Start</a></li>
@@ -18,26 +29,73 @@
   </nav>
 </header>
 
-<section class="hero">
-  <h1>Massiv. Monolithisch. Ein Statement.</h1>
-  <p>Suar-Tische aus einem Stück. Unverleimt. Unverwechselbar.</p>
-  <a href="tische.html" class="btn-dark">Jetzt ansehen</a>
-</section>
+  <section class="hero">
+    <h1>Monolith-Tische aus Massivholz</h1>
+    <p>Einzigartige Unikate aus einem Stück Holz – rustikal, edel, nachhaltig.</p>
+  </section>
 
-<section class="tisch-highlights">
-  <!-- Drei Tische als Vorschau -->
-</section>
-
-<footer class="footer-dark">
-  <div class="footer-content">
-    <div>
-      <h4>Kontakt</h4>
-      <p>info@holzwerk.de</p>
-    </div>
-    <div>
-      <h4>Links</h4>
-      <p><a href="agb.html">AGB</a></p>
-      <p><a href="impressum.html">Impressum</a></p>
+ <section class="produkte startseite">
+  <h2>Unsere beliebtesten Tische</h2>
+  
+  <div class="haupt-tisch">
+    <img src="images/tisch1.jpg" alt="Monolith-Tisch Start" />
+    <div class="haupt-tisch-info">
+      <h3>Monolith-Tisch aus Suarholz</h3>
+      <p>Einzigartiges Unikat aus einem Stück. Massiv, natürlich, charaktervoll. Perfekt für Esszimmer oder Konferenzräume.</p>
+      <a href="tische.html" class="button-link">Alle Tische entdecken →</a>
     </div>
   </div>
+
+  <div class="tisch-grid klein">
+    <div class="tisch">
+      <img src="images/tisch2.jpg" alt="Monolith-Tisch 2" />
+      <h4>Monolith-Tisch 2</h4>
+      <p>Rustikal und modern zugleich.</p>
+    </div>
+    <div class="tisch">
+      <img src="images/tisch3.jpg" alt="Monolith-Tisch 3" />
+      <h4>Monolith-Tisch 3</h4>
+      <p>Natürliche Maserung in Handarbeit.</p>
+    </div>
+  </div>
+</section>
+
+ <style>
+    :root {
+      --holzwerk-gruen: #275317;
+    }
+
+   footer {
+      background: var(--holzwerk-gruen);
+      color: #fff;
+      padding: 40px 60px;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    footer a {
+      color: #e6e6e6;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <footer class="footer">
+  <p>
+    © 2025 Holzwerk – Monolith-Tische aus Suarholz |
+    <a href="impressum.html">Impressum</a> |
+    <a href="agb.html">AGB</a>
+  </p>
 </footer>
+
+</body>
+</html>
