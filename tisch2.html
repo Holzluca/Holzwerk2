@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monolith‑Tisch 2 • Holzwerk</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Holzwerk Logo"/>
+  <nav>
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="tische.html">Tische</a></li>
+      <li class="dropdown">
+        <a href="#">Unternehmen</a>
+        <ul class="dropdown-menu">
+          <li><a href="ueber‑uns.html">Über uns</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="agb.html">AGB</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="tisch-detail">
+  <div class="slideshow">
+    <button class="prev" onclick="slide(-1)">❮</button>
+    <img src="images/tisch2.jpg" class="active"/>
+    <img src="images/tisch2_detail1.jpg"/>
+    <img src="images/tisch2_detail2.jpg"/>
+    <button class="next" onclick="slide(1)">❯</button>
+  </div>
+  <div class="product-info">
+    <h1>Monolith‑Tisch 2</h1>
+    <p class="price">3.495 EUR</p>
+    <p class="sku">Artikel Nr.: 002‑SUAR‑260</p>
+    <button class="anfrage-button" onclick="window.location='mailto:info@holzwerk.de?subject=Anfrage%20Tisch%202'">Anfrage senden</button>
+
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Technische Details <span>+</span>
+      </div>
+      <div class="accordion-content">
+        <ul>
+          <li>Material: Suarholz, geölt</li>
+          <li>Maße: 260 × 95 × 76 cm</li>
+          <li>Gewicht: ca. 130 kg</li>
+          <li>Unikat mit Naturkante</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Gestellvarianten <span>+</span>
+      </div>
+      <div class="accordion-content">
+        <ul>
+          <li>U-Gestell schwarz</li>
+          <li>X-Gestell Edelstahl</li>
+          <li>Maßanfertigung auf Anfrage</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer-dark">
+  <p>© 2025 Holzwerk – Monolith‑Tische aus Suarholz | <a href="impressum.html">Impressum</a> | <a href="agb.html">AGB</a></p>
+</footer>
+
+<script>
+  let slideIdx = 0;
+  const imgs = document.querySelectorAll('.slideshow img');
+  function slide(n) {
+    imgs[slideIdx].classList.remove('active');
+    slideIdx = (slideIdx + n + imgs.length) % imgs.length;
+    imgs[slideIdx].classList.add('active');
+  }
+  function toggleAccordion(el) {
+    const content = el.nextElementSibling;
+    const open = content.style.display === 'block';
+    content.style.display = open ? 'none' : 'block';
+    el.querySelector('span').textContent = open ? '+' : '−';
+  }
+</script>
+
+</body>
+</html>
