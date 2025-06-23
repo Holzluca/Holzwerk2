@@ -1,59 +1,194 @@
-body {
-  background-color: #ffffff;
-  color: #111111;
-  font-family: 'Inter', sans-serif;
-  margin: 0;
+:root {
+  --bg-white: #ffffff;
+  --text-black: #111111;
+  --section-gray: #f5f5f5;
+  --accent-black: #000000;
+  --hover-gray: #222222;
 }
 
-.header-dark {
-  background-color: #000;
-  color: #fff;
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-black);
+  background: var(--bg-white);
+}
+
+header {
+  background: var(--accent-black);
   padding: 20px 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
-
-.header-dark nav ul {
+header img { height: 50px; }
+nav ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   gap: 30px;
 }
-
-.header-dark nav a {
-  color: #ffffff;
+nav a {
+  color: var(--bg-white);
   text-decoration: none;
   font-weight: 500;
 }
-
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background-color: #f5f5f5;
+nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: var(--accent-black);
+  margin-top: 10px;
+  padding: 10px 0;
 }
-
+nav li:hover .dropdown-menu {
+  display: block;
+}
+nav .dropdown-menu li {
+  color: var(--bg-white);
+  padding: 8px 20px;
+}
+.hero {
+  background: var(--section-gray);
+  padding: 80px 20px;
+  text-align: center;
+}
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
-  margin-bottom: 1rem;
+  color: var(--text-black);
+  margin-bottom: 20px;
 }
-
 .btn-dark {
-  background-color: #000;
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
-  border: none;
+  background: var(--accent-black);
+  color: var(--bg-white);
+  padding: 15px 30px;
   font-weight: bold;
+  text-decoration: none;
 }
-
+.tisch-grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 60px 40px;
+}
+.tisch-card {
+  background: var(--section-gray);
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+}
+.tisch-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.tisch-card h3 {
+  margin: 15px 0 10px;
+}
+.tisch-card a {
+  display: inline-block;
+  background: var(--accent-black);
+  color: var(--bg-white);
+  margin-top: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.tisch-detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+.slideshow {
+  flex: 1 1 600px;
+  max-width: 80%;
+  position: relative;
+}
+.slideshow img {
+  width: 100%;
+  height: auto;
+  display: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.slideshow img.active {
+  display: block;
+}
+.slideshow .prev, .slideshow .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.slideshow .prev { left: 10px; }
+.slideshow .next { right: 10px; }
+.product-info {
+  flex: 1 1 400px;
+}
+.product-info h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+}
+.product-info .price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--accent-black);
+  margin: 10px 0;
+}
+.product-info .sku {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+.product-info .anfrage-button {
+  background: var(--accent-black);
+  color: var(--bg-white);
+  padding: 12px 28px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+.accordion-section {
+  border-top: 1px solid #ccc;
+  padding: 15px 0;
+}
+.accordion-header {
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--accent-black);
+}
+.accordion-header span {
+  font-size: 18px;
+}
+.accordion-content {
+  display: none;
+  padding: 10px 0;
+  font-size: 0.95rem;
+}
 .footer-dark {
-  background-color: #000;
-  color: #fff;
+  background: var(--accent-black);
+  color: var(--bg-white);
+  text-align: center;
   padding: 40px;
 }
-
 .footer-dark a {
-  color: #fff;
-  text-decoration: none;
+  color: var(--bg-white);
+  text-decoration: underline;
+  font-size: 0.95rem;
 }
