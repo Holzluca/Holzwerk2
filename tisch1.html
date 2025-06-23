@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monolith-Tisch 1 – Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <!-- identisch -->
+  </header>
+
+  <main class="tisch-detail">
+    <h1>Monolith-Tisch 1</h1>
+    <div class="detail-container">
+      <div class="slideshow">
+        <img src="images/tisch1.jpg" class="slide" alt="Tisch Hauptansicht">
+        <img src="images/tisch1_detail1.jpg" class="slide hidden" alt="Detail 1">
+        <img src="images/tisch1_detail2.jpg" class="slide hidden" alt="Detail 2">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+      <div class="details">
+        <div class="accordion-section">
+          <button class="accordion">Technische Details</button>
+          <div class="panel">
+            <ul>
+              <li>Material: Suarholz, geölt</li>
+              <li>Maße: 240 × 100 × 76 cm</li>
+              <li>Gewicht: ca. 120 kg</li>
+              <li>Einzelstück mit Naturkante</li>
+              <li>Herkunft: Indonesien</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-section">
+          <button class="accordion">Gestell-Optionen</button>
+          <div class="panel">
+            <p>U-Profil, X-Fuß oder Trapezgestell in Schwarzstahl oder Edelstahl.</p>
+          </div>
+        </div>
+        <p class="price">Preis: 2.490 €</p>
+        <a class="anfrage-btn" href="mailto:info@holzwerk.de">Anfrage senden</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <!-- identisch -->
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    let current = 0;
+    document.querySelector(".next").onclick = () => {
+      slides[current].classList.add("hidden");
+      current = (current + 1) % slides.length;
+      slides[current].classList.remove("hidden");
+    };
+    document.querySelector(".prev").onclick = () => {
+      slides[current].classList.add("hidden");
+      current = (current - 1 + slides.length) % slides.length;
+      slides[current].classList.remove("hidden");
+    };
+
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(btn =>
+      btn.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      })
+    );
+  </script>
+
+</body>
+</html>
