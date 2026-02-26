@@ -1,78 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Monolith-Tisch 1 – Details</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Monolith-Tisch 1 – Holzwerk</title>
+  <meta name="description" content="Monolith-Tisch 1 aus Suarholz – Maße, Material, Gestelloptionen und Anfrage." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <!-- identisch -->
+  <!-- Announcement Bar -->
+  <div class="announce">
+    <div class="container inner">
+      <div class="left">
+        <span class="badge">Maßanfertigung</span>
+        <span>Lieferzeit: 4–8 Wochen</span>
+        <span>Handgefertigt in Deutschland</span>
+      </div>
+      <a href="kontakt.html" class="badge">Beratung anfragen</a>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Holzwerk Startseite">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Holzwerk</span>
+      </a>
+
+      <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainnav">
+        ☰
+      </button>
+
+      <nav class="nav" id="mainnav">
+        <a href="index.html">Start</a>
+        <a href="tische.html">Tische</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="faq.html">FAQ</a>
+        <a href="kontakt.html" class="cta">Kontakt</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="tisch-detail">
-    <h1>Monolith-Tisch 1</h1>
-    <div class="detail-container">
-      <div class="slideshow">
-        <img src="images/tisch1.jpg" class="slide" alt="Tisch Hauptansicht">
-        <img src="images/tisch1_detail1.jpg" class="slide hidden" alt="Detail 1">
-        <img src="images/tisch1_detail2.jpg" class="slide hidden" alt="Detail 2">
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
+  <main>
+
+    <!-- Product header -->
+    <section class="collection-hero">
+      <div class="container">
+        <span class="kicker">Produktdetails</span>
+        <h1 class="h1">Monolith-Tisch 1</h1>
+        <p class="lead">Einzelstück aus Suarholz mit Naturkante – geölt, massiv und charakterstark.</p>
+
+        <div class="meta" aria-label="Kurzinfos">
+          <span class="pill">Suarholz · geölt</span>
+          <span class="pill">240 × 100 × 76 cm</span>
+          <span class="pill">ca. 120 kg</span>
+          <span class="pill">Preis: 2.490 €</span>
+        </div>
       </div>
-      <div class="details">
-        <div class="accordion-section">
-          <button class="accordion">Technische Details</button>
-          <div class="panel">
-            <ul>
-              <li>Material: Suarholz, geölt</li>
-              <li>Maße: 240 × 100 × 76 cm</li>
-              <li>Gewicht: ca. 120 kg</li>
-              <li>Einzelstück mit Naturkante</li>
-              <li>Herkunft: Indonesien</li>
-            </ul>
+    </section>
+
+    <!-- Product layout -->
+    <section class="section">
+      <div class="container product">
+
+        <!-- Gallery -->
+        <div class="gallery" aria-label="Bildergalerie">
+          <div class="main">
+            <img id="mainImg" src="images/tisch1.jpg" alt="Monolith-Tisch 1 – Hauptansicht">
+          </div>
+
+          <!-- Thumbnails (lightweight instead of slideshow buttons) -->
+          <div class="thumbs">
+            <button class="thumb active" data-src="images/tisch1.jpg" aria-label="Bild 1 anzeigen">
+              <img src="images/tisch1.jpg" alt="">
+            </button>
+            <button class="thumb" data-src="images/tisch1_detail1.jpg" aria-label="Detailbild 1 anzeigen">
+              <img src="images/tisch1_detail1.jpg" alt="">
+            </button>
+            <button class="thumb" data-src="images/tisch1_detail2.jpg" aria-label="Detailbild 2 anzeigen">
+              <img src="images/tisch1_detail2.jpg" alt="">
+            </button>
           </div>
         </div>
-        <div class="accordion-section">
-          <button class="accordion">Gestell-Optionen</button>
-          <div class="panel">
-            <p>U-Profil, X-Fuß oder Trapezgestell in Schwarzstahl oder Edelstahl.</p>
+
+        <!-- Specs / CTA -->
+        <aside class="specs">
+          <h2 class="h2" style="margin-bottom:6px;">Details</h2>
+          <p class="lead" style="margin-top:0;">
+            Massives Suarholz mit Naturkante – jedes Stück ist einzigartig in Maserung und Form.
+          </p>
+
+          <ul class="spec-list">
+            <li><span class="k">Material</span><span>Suarholz, geölt</span></li>
+            <li><span class="k">Maße</span><span>240 × 100 × 76 cm</span></li>
+            <li><span class="k">Gewicht</span><span>ca. 120 kg</span></li>
+            <li><span class="k">Kante</span><span>Naturkante</span></li>
+            <li><span class="k">Herkunft</span><span>Indonesien</span></li>
+          </ul>
+
+          <div class="panel" style="margin-top:14px;">
+            <h3 class="h2" style="font-size:18px; margin:0 0 8px;">Gestell-Optionen</h3>
+            <p class="lead" style="margin:0;">
+              U-Profil, X-Fuß oder Trapezgestell in Schwarzstahl oder Edelstahl.
+            </p>
           </div>
-        </div>
-        <p class="price">Preis: 2.490 €</p>
-        <a class="anfrage-btn" href="mailto:info@holzwerk.de">Anfrage senden</a>
+
+          <div class="actions" style="margin-top:16px;">
+            <a class="btn primary" href="kontakt.html">Anfrage starten</a>
+            <a class="btn" href="tische.html">Zur Übersicht</a>
+          </div>
+
+          <p class="small" style="margin-top:10px;">
+            Hinweis: Holz ist ein Naturprodukt – Farbe/Maserung können leicht variieren.
+          </p>
+
+          <!-- Optional mailto quick form -->
+          <div class="divider" style="margin:16px 0;"></div>
+
+          <h3 class="h2" style="font-size:18px; margin:0 0 6px;">Schnellanfrage</h3>
+          <form class="form" action="mailto:info@holzwerk.de" method="post" enctype="text/plain">
+            <div>
+              <div class="label">Name</div>
+              <input class="input" name="Name" autocomplete="name" required />
+            </div>
+            <div>
+              <div class="label">E-Mail</div>
+              <input class="input" type="email" name="Email" autocomplete="email" required />
+            </div>
+            <div>
+              <div class="label">Nachricht</div>
+              <textarea class="textarea" name="Nachricht">Hallo, ich interessiere mich für Monolith-Tisch 1 (240×100×76). Bitte senden Sie mir ein Angebot / weitere Infos.</textarea>
+            </div>
+            <button class="btn primary" type="submit">E-Mail vorbereiten</button>
+            <p class="small" style="margin:8px 0 0;">
+              Öffnet dein Mailprogramm mit vorausgefüllter Nachricht.
+            </p>
+          </form>
+        </aside>
+
       </div>
-    </div>
+    </section>
+
   </main>
 
-  <footer>
-    <!-- identisch -->
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="y"></span> Holzwerk · <a href="mailto:info@holzwerk.de">info@holzwerk.de</a></span>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="agb.html">AGB</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
   </footer>
 
   <script>
-    const slides = document.querySelectorAll(".slide");
-    let current = 0;
-    document.querySelector(".next").onclick = () => {
-      slides[current].classList.add("hidden");
-      current = (current + 1) % slides.length;
-      slides[current].classList.remove("hidden");
-    };
-    document.querySelector(".prev").onclick = () => {
-      slides[current].classList.add("hidden");
-      current = (current - 1 + slides.length) % slides.length;
-      slides[current].classList.remove("hidden");
-    };
+    // Footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-    const acc = document.querySelectorAll(".accordion");
-    acc.forEach(btn =>
-      btn.addEventListener("click", function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        panel.style.display = panel.style.display === "block" ? "none" : "block";
-      })
-    );
+    // Mobile nav toggle
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav');
+    burger.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Gallery thumbs
+    const mainImg = document.getElementById('mainImg');
+    const thumbs = document.querySelectorAll('.thumb');
+
+    thumbs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        thumbs.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const src = btn.getAttribute('data-src');
+        if (src) mainImg.src = src;
+      });
+    });
   </script>
 
 </body>
