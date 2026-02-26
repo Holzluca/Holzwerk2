@@ -24,17 +24,17 @@
   <!-- Sticky Header -->
   <header class="site-header">
     <div class="container navbar">
-      <a class="brand" href="index.html">
-        <span class="dot"></span>
+      <a class="brand" href="index.html" aria-label="Holzwerk Startseite">
+        <span class="dot" aria-hidden="true"></span>
         <span>Holzwerk</span>
       </a>
 
-      <button class="burger" aria-label="Menü" onclick="document.querySelector('.nav').classList.toggle('open')">
+      <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainnav">
         ☰
       </button>
 
-      <nav class="nav">
-        <a href="index.html">Start</a>
+      <nav class="nav" id="mainnav">
+        <a href="index.html" aria-current="page">Start</a>
         <a href="tische.html">Tische</a>
         <a href="ueber-uns.html">Über uns</a>
         <a href="faq.html">FAQ</a>
@@ -43,149 +43,163 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="collection-hero">
-    <div class="container collection-wrap">
-      <div>
-        <span class="kicker">Massivholz nach Maß</span>
-        <h1 class="h1">Zeitlose Tische aus echtem Holz – gebaut fürs Leben.</h1>
-        <p class="lead">
-          Massive Unikate aus Suar- und Massivholz: individuell planbar, sauber verarbeitet,
-          mit langlebigen Oberflächen. Wir begleiten dich von der Idee bis zur Lieferung.
-        </p>
+  <main>
 
-        <div class="meta">
-          <span class="pill">Maße nach Wunsch</span>
-          <span class="pill">Kanten & Gestelle</span>
-          <span class="pill">Öl/Wachs Finish</span>
-          <span class="pill">Persönliche Beratung</span>
-        </div>
+    <!-- Hero -->
+    <section class="collection-hero">
+      <div class="container collection-wrap">
+        <div>
+          <span class="kicker">Massivholz nach Maß</span>
+          <h1 class="h1">Zeitlose Tische aus echtem Holz – gebaut fürs Leben.</h1>
+          <p class="lead">
+            Massive Unikate aus Suar- und Massivholz: individuell planbar, sauber verarbeitet,
+            mit langlebigen Oberflächen. Wir begleiten dich von der Idee bis zur Lieferung.
+          </p>
 
-        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn" href="tische.html">Modelle ansehen</a>
-          <a class="btn" href="kontakt.html">Angebot anfragen</a>
-        </div>
-
-        <p class="small" style="margin-top:10px;">
-          Antwort i. d. R. innerhalb von 24–48h (Werktage).
-        </p>
-      </div>
-
-      <aside class="panel">
-        <h2 class="h2">Richtpreis in 2 Minuten</h2>
-        <p class="lead" style="margin-top:6px">
-          Schick uns grob: Länge × Breite, Holzart (falls bekannt) und gewünschtes Gestell.
-        </p>
-        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn" href="kontakt.html">Jetzt starten</a>
-          <a class="btn" href="faq.html">Wie läuft’s ab?</a>
-        </div>
-        <p class="small" style="margin-top:12px">
-          Optional: Foto vom Raum hilft bei der Empfehlung.
-        </p>
-      </aside>
-    </div>
-  </section>
-
-  <!-- Featured / Quick links -->
-  <section class="section">
-    <div class="container">
-      <div style="display:flex; align-items:end; justify-content:space-between; gap:14px; margin-bottom:14px;">
-        <h2 class="h2" style="margin:0;">Beliebt</h2>
-        <span class="small">Direkt zu den Modellen</span>
-      </div>
-
-      <div class="grid">
-        <a class="card" href="tisch1.html">
-          <div class="img"><img src="images/tisch1.jpg" alt="Tisch Modell 1" /></div>
-          <div class="body">
-            <p class="title">Tisch Modell 1</p>
-            <p class="desc">Eiche massiv · Schweizer Kante · Stahlgestell</p>
-            <div class="row">
-              <span class="price">ab 1.990 €</span>
-              <span class="btn">Details</span>
-            </div>
+          <div class="meta" aria-label="Vorteile">
+            <span class="pill">Maße nach Wunsch</span>
+            <span class="pill">Kanten &amp; Gestelle</span>
+            <span class="pill">Öl/Wachs Finish</span>
+            <span class="pill">Persönliche Beratung</span>
           </div>
-        </a>
 
-        <a class="card" href="tisch2.html">
-          <div class="img"><img src="images/tisch2.jpg" alt="Tisch Modell 2" /></div>
-          <div class="body">
-            <p class="title">Tisch Modell 2</p>
-            <p class="desc">Nussbaum · Gerade Kante · Holzgestell</p>
-            <div class="row">
-              <span class="price">ab 2.390 €</span>
-              <span class="btn">Details</span>
-            </div>
+          <div class="actions">
+            <a class="btn primary" href="tische.html">Modelle ansehen</a>
+            <a class="btn" href="kontakt.html">Angebot anfragen</a>
           </div>
-        </a>
 
-        <a class="card" href="tisch3.html">
-          <div class="img"><img src="images/tisch3.jpg" alt="Tisch Modell 3" /></div>
-          <div class="body">
-            <p class="title">Tisch Modell 3</p>
-            <p class="desc">Esche · Naturkante · Kreuzgestell</p>
-            <div class="row">
-              <span class="price">ab 2.190 €</span>
-              <span class="btn">Details</span>
-            </div>
+          <p class="small note">
+            Antwort i. d. R. innerhalb von 24–48h (Werktage).
+          </p>
+        </div>
+
+        <aside class="panel">
+          <h2 class="h2">Richtpreis in 2 Minuten</h2>
+          <p class="lead">
+            Schick uns grob: Länge × Breite, Holzart (falls bekannt) und gewünschtes Gestell.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="kontakt.html">Jetzt starten</a>
+            <a class="btn" href="faq.html">Wie läuft’s ab?</a>
           </div>
-        </a>
+          <p class="small note">
+            Optional: Foto vom Raum hilft bei der Empfehlung.
+          </p>
+        </aside>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Steps -->
-  <section class="section">
-    <div class="container">
-      <span class="kicker">So läuft’s ab</span>
-      <h2 class="h2">Vom Wunsch zum Tisch in 4 Schritten</h2>
+    <!-- Featured -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2">Beliebt</h2>
+          <span class="small">Direkt zu den Modellen</span>
+        </div>
 
-      <div class="steps" style="margin-top:14px;">
-        <div class="step">
-          <div class="n">1</div>
-          <div class="title">Beratung</div>
-          <p class="desc">Maße, Holz, Kante, Gestell – wir strukturieren die Optionen.</p>
-        </div>
-        <div class="step">
-          <div class="n">2</div>
-          <div class="title">Freigabe</div>
-          <p class="desc">Angebot + Skizze, erst nach deinem Okay starten wir.</p>
-        </div>
-        <div class="step">
-          <div class="n">3</div>
-          <div class="title">Fertigung</div>
-          <p class="desc">Handarbeit, stabile Konstruktion, sauberes Finish.</p>
-        </div>
-        <div class="step">
-          <div class="n">4</div>
-          <div class="title">Lieferung</div>
-          <p class="desc">Sicher verpackt und terminiert – bis in den Raum.</p>
+        <div class="grid">
+          <a class="card" href="tisch1.html">
+            <div class="img"><img src="images/tisch1.jpg" alt="Tisch Modell 1" /></div>
+            <div class="body">
+              <p class="title">Tisch Modell 1</p>
+              <p class="desc">Eiche massiv · Schweizer Kante · Stahlgestell</p>
+              <div class="row">
+                <span class="price">ab 1.990 €</span>
+                <span class="btn">Details</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="card" href="tisch2.html">
+            <div class="img"><img src="images/tisch2.jpg" alt="Tisch Modell 2" /></div>
+            <div class="body">
+              <p class="title">Tisch Modell 2</p>
+              <p class="desc">Nussbaum · Gerade Kante · Holzgestell</p>
+              <div class="row">
+                <span class="price">ab 2.390 €</span>
+                <span class="btn">Details</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="card" href="tisch3.html">
+            <div class="img"><img src="images/tisch3.jpg" alt="Tisch Modell 3" /></div>
+            <div class="body">
+              <p class="title">Tisch Modell 3</p>
+              <p class="desc">Esche · Naturkante · Kreuzgestell</p>
+              <div class="row">
+                <span class="price">ab 2.190 €</span>
+                <span class="btn">Details</span>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
+    </section>
 
-      <div style="margin-top:16px;">
-        <a class="btn" href="kontakt.html">Beratung anfragen</a>
+    <!-- Steps -->
+    <section class="section">
+      <div class="container">
+        <span class="kicker">So läuft’s ab</span>
+        <h2 class="h2">Vom Wunsch zum Tisch in 4 Schritten</h2>
+
+        <div class="steps steps-spaced">
+          <div class="step">
+            <div class="n">1</div>
+            <div class="title">Beratung</div>
+            <p class="desc">Maße, Holz, Kante, Gestell – wir strukturieren die Optionen.</p>
+          </div>
+          <div class="step">
+            <div class="n">2</div>
+            <div class="title">Freigabe</div>
+            <p class="desc">Angebot + Skizze, erst nach deinem Okay starten wir.</p>
+          </div>
+          <div class="step">
+            <div class="n">3</div>
+            <div class="title">Fertigung</div>
+            <p class="desc">Handarbeit, stabile Konstruktion, sauberes Finish.</p>
+          </div>
+          <div class="step">
+            <div class="n">4</div>
+            <div class="title">Lieferung</div>
+            <p class="desc">Sicher verpackt und terminiert – bis in den Raum.</p>
+          </div>
+        </div>
+
+        <div class="actions actions-top">
+          <a class="btn primary" href="kontakt.html">Beratung anfragen</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:space-between; align-items:center;">
-        <span>© <span id="y"></span> Holzwerk · <a href="mailto:info@holzwerk.de">info@holzwerk.de</a></span>
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="impressum.html">Impressum</a>
-          <a href="agb.html">AGB</a>
-          <a href="faq.html">FAQ</a>
-        </div>
+    <div class="container footer-inner">
+      <span>© <span id="y"></span> Holzwerk · <a href="mailto:info@holzwerk.de">info@holzwerk.de</a></span>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="agb.html">AGB</a>
+        <a href="faq.html">FAQ</a>
       </div>
     </div>
   </footer>
 
   <script>
+    // Footer year
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle (more robust than inline onclick)
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav');
+
+    burger.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(isOpen));
+    });
   </script>
+</body>
+</html>
 </body>
 </html>
