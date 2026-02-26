@@ -1,56 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Holzwerk – Startseite</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Holzwerk – Massivholztische nach Maß</title>
+  <meta name="description" content="Massive Unikate aus Suar- und Massivholz – individuell, nachhaltig, zeitlos. Maßanfertigung, Beratung und Fertigung in Handarbeit." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="Holzwerk Logo" />
+  <!-- Announcement Bar -->
+  <div class="announce">
+    <div class="container inner">
+      <div class="left">
+        <span class="badge">Maßanfertigung</span>
+        <span>Lieferzeit: 4–8 Wochen</span>
+        <span>Handgefertigt in Deutschland</span>
+      </div>
+      <a href="kontakt.html" class="badge">Beratung anfragen</a>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Start</a></li>
-        <li><a href="tische.html">Tische</a></li>
-        <li class="dropdown">
-          <a href="#">Unternehmen</a>
-          <ul class="dropdown-menu">
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
-            <li><a href="agb.html">AGB</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <span class="dot"></span>
+        <span>Holzwerk</span>
+      </a>
+
+      <button class="burger" aria-label="Menü" onclick="document.querySelector('.nav').classList.toggle('open')">
+        ☰
+      </button>
+
+      <nav class="nav">
+        <a href="index.html">Start</a>
+        <a href="tische.html">Tische</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="faq.html">FAQ</a>
+        <a href="kontakt.html" class="cta">Kontakt</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Willkommen bei Holzwerk</h1>
-      <p>Massive Unikate aus Suar-Holz – individuell, nachhaltig, zeitlos.</p>
-    </section>
-  </main>
+  <!-- Hero -->
+  <section class="collection-hero">
+    <div class="container collection-wrap">
+      <div>
+        <span class="kicker">Massivholz nach Maß</span>
+        <h1 class="h1">Zeitlose Tische aus echtem Holz – gebaut fürs Leben.</h1>
+        <p class="lead">
+          Massive Unikate aus Suar- und Massivholz: individuell planbar, sauber verarbeitet,
+          mit langlebigen Oberflächen. Wir begleiten dich von der Idee bis zur Lieferung.
+        </p>
 
-  <footer>
-    <div class="footer-content">
-      <div>
-        <h4>Holzwerk</h4>
-        <p>Massivholztische aus Suar</p>
-        <p><a href="mailto:info@holzwerk.de">info@holzwerk.de</a></p>
+        <div class="meta">
+          <span class="pill">Maße nach Wunsch</span>
+          <span class="pill">Kanten & Gestelle</span>
+          <span class="pill">Öl/Wachs Finish</span>
+          <span class="pill">Persönliche Beratung</span>
+        </div>
+
+        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" href="tische.html">Modelle ansehen</a>
+          <a class="btn" href="kontakt.html">Angebot anfragen</a>
+        </div>
+
+        <p class="small" style="margin-top:10px;">
+          Antwort i. d. R. innerhalb von 24–48h (Werktage).
+        </p>
       </div>
-      <div>
-        <h4>Links</h4>
-        <p><a href="impressum.html">Impressum</a></p>
-        <p><a href="agb.html">AGB</a></p>
+
+      <aside class="panel">
+        <h2 class="h2">Richtpreis in 2 Minuten</h2>
+        <p class="lead" style="margin-top:6px">
+          Schick uns grob: Länge × Breite, Holzart (falls bekannt) und gewünschtes Gestell.
+        </p>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" href="kontakt.html">Jetzt starten</a>
+          <a class="btn" href="faq.html">Wie läuft’s ab?</a>
+        </div>
+        <p class="small" style="margin-top:12px">
+          Optional: Foto vom Raum hilft bei der Empfehlung.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Featured / Quick links -->
+  <section class="section">
+    <div class="container">
+      <div style="display:flex; align-items:end; justify-content:space-between; gap:14px; margin-bottom:14px;">
+        <h2 class="h2" style="margin:0;">Beliebt</h2>
+        <span class="small">Direkt zu den Modellen</span>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="tisch1.html">
+          <div class="img"><img src="images/tisch1.jpg" alt="Tisch Modell 1" /></div>
+          <div class="body">
+            <p class="title">Tisch Modell 1</p>
+            <p class="desc">Eiche massiv · Schweizer Kante · Stahlgestell</p>
+            <div class="row">
+              <span class="price">ab 1.990 €</span>
+              <span class="btn">Details</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="tisch2.html">
+          <div class="img"><img src="images/tisch2.jpg" alt="Tisch Modell 2" /></div>
+          <div class="body">
+            <p class="title">Tisch Modell 2</p>
+            <p class="desc">Nussbaum · Gerade Kante · Holzgestell</p>
+            <div class="row">
+              <span class="price">ab 2.390 €</span>
+              <span class="btn">Details</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="tisch3.html">
+          <div class="img"><img src="images/tisch3.jpg" alt="Tisch Modell 3" /></div>
+          <div class="body">
+            <p class="title">Tisch Modell 3</p>
+            <p class="desc">Esche · Naturkante · Kreuzgestell</p>
+            <div class="row">
+              <span class="price">ab 2.190 €</span>
+              <span class="btn">Details</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section class="section">
+    <div class="container">
+      <span class="kicker">So läuft’s ab</span>
+      <h2 class="h2">Vom Wunsch zum Tisch in 4 Schritten</h2>
+
+      <div class="steps" style="margin-top:14px;">
+        <div class="step">
+          <div class="n">1</div>
+          <div class="title">Beratung</div>
+          <p class="desc">Maße, Holz, Kante, Gestell – wir strukturieren die Optionen.</p>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <div class="title">Freigabe</div>
+          <p class="desc">Angebot + Skizze, erst nach deinem Okay starten wir.</p>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <div class="title">Fertigung</div>
+          <p class="desc">Handarbeit, stabile Konstruktion, sauberes Finish.</p>
+        </div>
+        <div class="step">
+          <div class="n">4</div>
+          <div class="title">Lieferung</div>
+          <p class="desc">Sicher verpackt und terminiert – bis in den Raum.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;">
+        <a class="btn" href="kontakt.html">Beratung anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+        <span>© <span id="y"></span> Holzwerk · <a href="mailto:info@holzwerk.de">info@holzwerk.de</a></span>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="impressum.html">Impressum</a>
+          <a href="agb.html">AGB</a>
+          <a href="faq.html">FAQ</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
