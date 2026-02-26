@@ -424,3 +424,34 @@ img{ max-width:100%; display:block; }
 }
 .footer a{ color:var(--text); }
 .footer a:hover{ text-decoration:underline; }
+
+/* --- Layout helpers used in index.html --- */
+.actions{
+  margin-top:16px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.note{ margin-top:10px; }
+.section-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:14px;
+}
+.steps-spaced{ margin-top:14px; }
+.actions-top{ margin-top:16px; }
+
+.footer-inner{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+}
+.footer-links{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
