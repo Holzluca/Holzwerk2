@@ -1,49 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Unsere Tische</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tische nach Maß – Holzwerk</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <!-- identisch wie bei index.html -->
+  <!-- (Header-Snippet hier einfügen) -->
+  <div class="announce">
+    <div class="container inner">
+      <div class="left">
+        <span class="badge">Maßanfertigung</span>
+        <span>Lieferzeit: 4–8 Wochen</span>
+        <span>Handgefertigt in Deutschland</span>
+      </div>
+      <a href="kontakt.html" class="badge">Beratung anfragen</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html"><span class="dot"></span><span>Holzwerk</span></a>
+      <button class="burger" aria-label="Menü" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+      <nav class="nav">
+        <a href="index.html">Start</a>
+        <a href="tische.html">Tische</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="faq.html">FAQ</a>
+        <a href="kontakt.html" class="cta">Kontakt</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="produkte">
-    <h2>Unsere Tische</h2>
-    <p class="intro-text">
-      Holzwerk ist dein Anbieter für unverleimte Suar-Baumtische aus einem Stück Holz.<br>
-      Im Web bieten wir nur einen Teil des Tisch-Sortiments an.<br>
-      Wir haben Größen von 1,6 m bis 3,4 m im Sortiment mit Naturkante und gesägt.<br>
-      Auf Anfrage stellen wir Ihnen gerne Bilder und Angaben zur Verfügung.
-    </p>
+  <!-- Collection Hero -->
+  <section class="collection-hero">
+    <div class="container collection-wrap">
+      <div>
+        <span class="kicker">Esstische nach Maß</span>
+        <h1 class="h1">Massivholz-Tische, gebaut für Jahrzehnte.</h1>
+        <p class="lead">
+          Wähle Holzart, Maße, Kante und Gestell – wir fertigen deinen Tisch in Handarbeit.
+          Transparent, langlebig, exakt nach deinen Vorstellungen.
+        </p>
 
-    <div class="tisch-grid">
-      <!-- Wiederhole diesen Block für tisch1 bis tisch10 -->
-      <div class="tisch-card">
-        <a href="tisch1.html">
-          <img src="images/tisch1.jpg" alt="Monolith-Tisch 1">
-          <h3>Monolith-Tisch 1</h3>
-        </a>
+        <div class="meta">
+          <span class="pill">Eiche · Nussbaum · Esche</span>
+          <span class="pill">120–300 cm</span>
+          <span class="pill">Öl/Wachs Finish</span>
+          <span class="pill">Individuelle Gestelle</span>
+        </div>
       </div>
-      <div class="tisch-card">
-        <a href="tisch2.html">
-          <img src="images/tisch2.jpg" alt="Monolith-Tisch 2">
-          <h3>Monolith-Tisch 2</h3>
-        </a>
-      </div>
-      <!-- Weitere Tische… -->
+
+      <aside class="panel">
+        <h2 class="h2">Schnell anfragen</h2>
+        <p class="lead" style="margin-top:6px">
+          Sag uns Maße + Holzart – wir melden uns mit einer Empfehlung und Richtpreis.
+        </p>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" href="kontakt.html">Beratung</a>
+          <a class="btn" href="faq.html">Ablauf & FAQ</a>
+        </div>
+        <p class="small" style="margin-top:12px">
+          Tipp: Fotos vom Raum/Untergestell helfen.
+        </p>
+      </aside>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    <!-- identisch -->
+  <!-- Product Grid -->
+  <section class="section">
+    <div class="container">
+      <div style="display:flex; align-items:end; justify-content:space-between; gap:14px; margin-bottom:14px;">
+        <h2 class="h2" style="margin:0;">Modelle</h2>
+        <span class="small">3 Produkte</span>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="tisch1.html">
+          <div class="img">
+            <img src="images/tisch1.jpg" alt="Tisch 1" />
+          </div>
+          <div class="body">
+            <p class="title">Tisch Modell 1</p>
+            <p class="desc">Eiche massiv · Schweizer Kante · Stahlgestell</p>
+            <div class="row">
+              <span class="price">ab 1.990 €</span>
+              <span class="btn">Details</span>
+            </div>
+            <p class="small" style="margin:10px 0 0;">Lieferzeit: 4–8 Wochen</p>
+          </div>
+        </a>
+
+        <a class="card" href="tisch2.html">
+          <div class="img">
+            <img src="images/tisch2.jpg" alt="Tisch 2" />
+          </div>
+          <div class="body">
+            <p class="title">Tisch Modell 2</p>
+            <p class="desc">Nussbaum · Gerade Kante · Holzgestell</p>
+            <div class="row">
+              <span class="price">ab 2.390 €</span>
+              <span class="btn">Details</span>
+            </div>
+            <p class="small" style="margin:10px 0 0;">Auf Maß verfügbar</p>
+          </div>
+        </a>
+
+        <a class="card" href="tisch3.html">
+          <div class="img">
+            <img src="images/tisch3.jpg" alt="Tisch 3" />
+          </div>
+          <div class="body">
+            <p class="title">Tisch Modell 3</p>
+            <p class="desc">Esche · Naturkante · Kreuzgestell</p>
+            <div class="row">
+              <span class="price">ab 2.190 €</span>
+              <span class="btn">Details</span>
+            </div>
+            <p class="small" style="margin:10px 0 0;">Finish: Öl/Wachs</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section class="section">
+    <div class="container">
+      <span class="kicker">So läuft’s ab</span>
+      <h2 class="h2">In 4 Schritten zum Maß-Tisch</h2>
+
+      <div class="steps" style="margin-top:14px;">
+        <div class="step">
+          <div class="n">1</div>
+          <div class="title">Beratung</div>
+          <p class="desc">Maße, Holz, Kante, Gestell – wir klären die Details.</p>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <div class="title">Freigabe</div>
+          <p class="desc">Du bekommst ein Angebot + Skizze, erst dann geht’s los.</p>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <div class="title">Fertigung</div>
+          <p class="desc">Handarbeit, saubere Oberflächen, langlebige Verbindung.</p>
+        </div>
+        <div class="step">
+          <div class="n">4</div>
+          <div class="title">Lieferung</div>
+          <p class="desc">Sicher verpackt und terminiert zu dir nach Hause.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;">
+        <a class="btn" href="kontakt.html">Jetzt Beratung starten</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+        <span>© <span id="y"></span> Holzwerk</span>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="impressum.html">Impressum</a>
+          <a href="agb.html">AGB</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-</body>
-</html>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
